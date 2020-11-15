@@ -1,11 +1,15 @@
-# 產生一個隨機整數1~100（不要印出來）
+# 產生一個隨機整數1~100 或由使用者自行決定
 # 讓使用者重複輸入數字去猜
 # 猜對的話 印出 "終於猜對了！"
 # 猜錯的話 要告訴他 比答案大還是小
 
 import random
+start = input('請決定隨機數字範圍開始值:')
+end = input('請決定隨機數字範圍結束值:')
+start = int(start)
+end = int(end)
 
-r = random.randint (1, 100)
+r = random.randint (start, end)
 count = 0
 while True:
 	count = count + 1  # count += 1
